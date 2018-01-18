@@ -90,6 +90,20 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created () {
+    this.initData()
+  },
+  methods: {
+    initData () {
+      console.log('111')
+      this.$axios.get('/api/posts', {}).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+        throw new Error(err)
+      })
+    }
   }
 }
 </script>
