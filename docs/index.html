@@ -1,2 +1,32 @@
-<!-- <!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ying-resume</title><link href=/static/css/app.0f43eb47429821159277dff26193146a.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.c51cf96be9b4f0e4871c.js></script><script type=text/javascript src=/static/js/vendor.60bd9e52f7d6c2bfecc2.js></script><script type=text/javascript src=/static/js/app.2e31b49880fbd78d2802.js></script></body></html> -->
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ying-resume</title><link href=/static/css/app.0f43eb47429821159277dff26193146a.css rel=stylesheet></head><body><div id=app>jfkadjfaslkdfjksladfjdjlfka</div><script type=text/javascript src=/static/js/manifest.c51cf96be9b4f0e4871c.js></script><script type=text/javascript src=/static/js/vendor.60bd9e52f7d6c2bfecc2.js></script><script type=text/javascript src=/static/js/app.2e31b49880fbd78d2802.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,height=device-height,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1"><title>myvue</title><link href=/static/css/app.54481633bdd61e268b109b8355b1c311.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.fb85e9e635abbe740109.js></script><script type=text/javascript src=/static/js/vendor.78bbe11a2e71fa48e927.js></script><script type=text/javascript src=/static/js/app.a79e401151b095d1acf2.js></script></body></html><script>//计算root fontsize
+    window.__setFontSize__ = (function (doc, win) {
+        if(!IsPC()) { //移动端
+            var docEl = doc.documentElement,
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';
+            };
+            if (!doc.addEventListener) return;
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+            doc.addEventListener('resize', recalc, false);
+
+            return recalc;
+        }
+    })(document, window);
+
+    function IsPC() { //判断是移动端还是pc
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    // console.log(IsPC());</script>
