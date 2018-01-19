@@ -97,7 +97,8 @@ export default {
   methods: {
     initData () {
       console.log('111')
-      this.$axios.get('/api/posts', {}).then(res => {
+      // this.$axios.get('/api/posts', {}).then(res => {
+      this.$axios.get('https://easy-mock.com/mock/5a01524d36a23b429ea925c5/example/query').then(res => {
         console.log(res)
       }).catch(err => {
         console.log(err)

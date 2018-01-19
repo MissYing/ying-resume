@@ -11,8 +11,15 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      // '/api/': {
+      //   target: 'http://localhost:3000',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/api': ''
+      //   }
+      // }
       '/api/': {
-        target: 'http://localhost:3000',
+        target: 'https://easy-mock.com/mock/5a01524d36a23b429ea925c5',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
