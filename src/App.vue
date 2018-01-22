@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <router-view/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -12,5 +13,4 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import "assets/scss/common.scss"
 </style>
