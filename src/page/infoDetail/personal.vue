@@ -57,10 +57,10 @@ export default {
 <style lang="scss">
   @import "../../assets/scss/common.scss";
   .personal {
-    width: 20rem;
+    width: 80%;
     margin: 1.875rem auto .625rem;
     border: .0625rem solid #46bd79;
-    padding: .625rem;
+    padding: .625rem .9375rem;
     @include rounded-corners;
     h3 {
       font-size: .875rem;
