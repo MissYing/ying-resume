@@ -1,18 +1,19 @@
 <template>
   <div class="personal">
     <h3>{{ userInfo.title }}</h3>
-    <div class="personal_main">
-      <div class="">姓名：{{ userInfo.name }}</div>
-      <div class="">性别：{{ userInfo.sex }}</div>
-      <a :href="tel" class="">电话：{{ userInfo.phone }}</a>
-      <div class="">学历：{{ userInfo.educate }}</div>
-      <div class="">邮箱：{{ userInfo.email }}</div>
-      <div class="">籍贯：{{ userInfo.nativePlace }}</div>
-      <div class="">生日：{{ userInfo.birthday }}</div>
-      <div class="">现居住地：{{ userInfo.place }}</div>
-      <div class="">求职地区：{{ userInfo.jobPlace }}</div>
-      <div class="">期望薪资：{{ userInfo.salaryExpectation }}</div>
-      <div class="">到岗时间：{{ userInfo.date }}</div>
+    <div class="main personal_main">
+      <div>姓名：{{ userInfo.name }}</div>
+      <div>性别：{{ userInfo.sex }}</div>
+      <a :href="tel">电话：{{ userInfo.phone }}</a>
+      <div>学历：{{ userInfo.educate }}</div>
+      <div>邮箱：{{ userInfo.email }}</div>
+      <div>籍贯：{{ userInfo.nativePlace }}</div>
+      <div>生日：{{ userInfo.birthday }}</div>
+      <div>求职地区：{{ userInfo.jobPlace }}</div>
+      <div>期望薪资：{{ userInfo.salaryExpectation }}</div>
+      <div>到岗时间：{{ userInfo.date }}</div>
+      <div>现居住地：{{ userInfo.place }}</div>
+      <div>github：{{ userInfo.github }}</div>
     </div>
     <div class="advantage">{{ userInfo.advantage }}</div>
     <g-button class="back" @click="backClickHandler">{{ btnFont }}</g-button>
@@ -75,6 +76,11 @@ export default {
       vertical-align: middle;
       margin-right: .625rem;
     }
+    .main {
+      border-bottom: .0625rem solid #42b983;
+      margin: 0 auto 1.875rem;
+      padding-bottom: 1.25rem;
+    }
     .personal_main {
       display: flex;
       // flex-wrap: wrap;
@@ -95,9 +101,6 @@ export default {
       }
     }
     .advantage {
-      padding-top: 2.5rem;
-      border-top: .0625rem solid #42b983;
-      margin-top: 1.875rem;
       padding-bottom: 1.875rem;
       font-size: .75rem;
       text-align: left;

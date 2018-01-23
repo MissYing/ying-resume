@@ -1,7 +1,11 @@
 <template>
   <div class="project">
     <h3>{{ project.title }}</h3>
-    <p>{{ project.projectOne }}</p>
+    <div class="main project_main">
+      <p>{{ project.projectOne }}</p>
+      <!-- <div class="work_item" v-for="(list, index) in project.lists" :key="index">
+      </div> -->
+    </div>
     <g-button class="back" @click="backClickHandler">{{ btnFont }}</g-button>
   </div>
 </template>
@@ -59,6 +63,11 @@ export default {
       background-image: url(../../assets/image/user.jpeg);
       vertical-align: middle;
       margin-right: .625rem;
+    }
+    .main {
+      border-bottom: .0625rem solid #42b983;
+      margin: 0 auto 1.875rem;
+      padding-bottom: 1.25rem;
     }
     .project_main {
       display: flex;

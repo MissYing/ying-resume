@@ -1,7 +1,7 @@
 <template>
   <div class="work">
     <h3>{{ works.title }}</h3>
-    <div class="work_main">
+    <div class="main work_main">
       <div class="work_item" v-for="(item, index) in works.work" :key="index">
         <h4>{{ item.level }}</h4>
         <p>{{ item.company }}</p>
@@ -67,10 +67,12 @@ export default {
       vertical-align: middle;
       margin-right: .625rem;
     }
-    .work_main {
+    .main {
       border-bottom: .0625rem solid #42b983;
       margin: 0 auto 1.875rem;
       padding-bottom: 1.25rem;
+    }
+    .work_main {
       .work_item {
         font-size: .75rem;
         p:last-child {
