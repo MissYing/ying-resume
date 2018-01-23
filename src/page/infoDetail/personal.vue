@@ -59,9 +59,11 @@ export default {
   .personal {
     width: 80%;
     max-width: 50rem;
-    margin: 1.875rem auto .625rem;
+    margin: .9375rem auto;
     border: .0625rem solid #46bd79;
     padding: .625rem .9375rem;
+    -webkit-overflow-scrolling : touch;
+    overflow-y: auto;
     @include rounded-corners;
     h3 {
       font-size: .875rem;
@@ -91,10 +93,11 @@ export default {
       text-align: left;
       max-width: 100%;
       overflow: hidden;
-      div:nth-child(odd), a {
-        min-width: 10.625rem;
-      }
+      // div:nth-child(odd), a {
+      //   min-width: 10.625rem;
+      // }
       div, a {
+        min-width: 9.375rem;
         line-height: 2.5rem;
       }
       div:last-child {

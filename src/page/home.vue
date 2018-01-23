@@ -46,6 +46,9 @@ export default {
     width: 100%;
     height: 100%;
     color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     > .itemOne {
       padding-top: 11.25rem;
       font-size: 3.75rem;
