@@ -1,21 +1,21 @@
 <template>
   <div class="personal">
     <h3>{{ userInfo.title }}</h3>
-    <div class="personal_main w_box">
-      <div class="flex_1">姓名：{{ userInfo.name }}</div>
-      <div class="flex_1">性别：{{ userInfo.sex }}</div>
-      <a :href="tel" class="flex_1">电话：{{ userInfo.phone }}</a>
-      <div class="flex_1">学历：{{ userInfo.educate }}</div>
-      <div class="flex_1">邮箱：{{ userInfo.email }}</div>
-      <div class="flex_1">籍贯：{{ userInfo.nativePlace }}</div>
-      <div class="flex_1">生日：{{ userInfo.birthday }}</div>
-      <div class="flex_1">现居住地：{{ userInfo.place }}</div>
-      <div class="flex_1">求职地区：{{ userInfo.jobPlace }}</div>
-      <div class="flex_1">期望薪资：{{ userInfo.salaryExpectation }}</div>
-      <div class="flex_1">到岗时间：{{ userInfo.date }}</div>
+    <div class="personal_main">
+      <div class="">姓名：{{ userInfo.name }}</div>
+      <div class="">性别：{{ userInfo.sex }}</div>
+      <a :href="tel" class="">电话：{{ userInfo.phone }}</a>
+      <div class="">学历：{{ userInfo.educate }}</div>
+      <div class="">邮箱：{{ userInfo.email }}</div>
+      <div class="">籍贯：{{ userInfo.nativePlace }}</div>
+      <div class="">生日：{{ userInfo.birthday }}</div>
+      <div class="">现居住地：{{ userInfo.place }}</div>
+      <div class="">求职地区：{{ userInfo.jobPlace }}</div>
+      <div class="">期望薪资：{{ userInfo.salaryExpectation }}</div>
+      <div class="">到岗时间：{{ userInfo.date }}</div>
     </div>
     <div class="advantage">{{ userInfo.advantage }}</div>
-    <g-button class="back" @click="backClickHandler">BACK</g-button>
+    <g-button class="back" @click="backClickHandler">{{ btnFont }}</g-button>
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
   data () {
     return {
       userInfo: '',
-      tel: ''
+      tel: '',
+      btnFont: '<< BACK'
     }
   },
   created () {
@@ -76,12 +77,21 @@ export default {
     }
     .personal_main {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      // flex-direction: row;
+      flex-flow: row wrap; // 以上两句可以用这句替代
       font-size: .75rem;
       text-align: left;
-      .flex_1 {
-        min-width: 50%;
+      max-width: 100%;
+      overflow: hidden;
+      div:nth-child(odd), a {
+        min-width: 10.625rem;
+      }
+      div, a {
         line-height: 2.5rem;
+      }
+      div:last-child {
+        margin-left: right;
       }
     }
     .advantage {
@@ -95,6 +105,7 @@ export default {
     .back {
       display: inline-block;
       @include rounded-corners;
+      font-size: .875rem;
     }
   }
 </style>

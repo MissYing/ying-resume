@@ -2,7 +2,7 @@
   <div class="project">
     <h3>{{ project.title }}</h3>
     <p>{{ project.projectOne }}</p>
-    <g-button class="back" @click="backClickHandler">BACK</g-button>
+    <g-button class="back" @click="backClickHandler">{{ btnFont }}</g-button>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
   name: 'project',
   data () {
     return {
-      project: ''
+      project: '',
+      btnFont: '<< BACK'
     }
   },
   created () {

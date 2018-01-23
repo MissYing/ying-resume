@@ -1,8 +1,15 @@
 <template>
   <div class="work">
-    <h3>{{ work.title }}</h3>
-    <p>{{ work.workOne }}</p>
-    <g-button class="back" @click="backClickHandler">BACK</g-button>
+    <h3>{{ works.title }}</h3>
+    <div class="work_main">
+      <div class="work_item" v-for="(item, index) in works.work" :key="index">
+        <h4>{{ item.level }}</h4>
+        <p>{{ item.company }}</p>
+        <p>{{ item.stayTime }}</p>
+        <p>{{ item.duty }}</p>
+      </div>
+    </div>
+    <g-button class="back" @click="backClickHandler">{{ btnFont }}</g-button>
   </div>
 </template>
 
@@ -11,7 +18,8 @@ export default {
   name: 'work',
   data () {
     return {
-      work: ''
+      works: '',
+      btnFont: '<< BACK'
     }
   },
   created () {
@@ -22,7 +30,7 @@ export default {
       this.$axios.get('https://easy-mock.com/mock/5a01524d36a23b429ea925c5/api/work').then(res => {
         console.log(res)
         if (res.data.success) {
-          this.work = res.data.data
+          this.works = res.data.data
         }
       }).catch(err => {
         console.log(err)
@@ -59,25 +67,19 @@ export default {
       vertical-align: middle;
       margin-right: .625rem;
     }
-    .personal_main {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: .75rem;
-      text-align: left;
-      .flex_1 {
-        min-width: 50%;
-        line-height: 2.5rem;
+    .work_main {
+      border-bottom: .0625rem solid #42b983;
+      margin: 0 auto 1.875rem;
+      padding-bottom: 1.25rem;
+      .work_item {
+        font-size: .75rem;
+        p:last-child {
+          text-align: left;
+        }
       }
     }
-    .advantage {
-      padding-top: 2.5rem;
-      border-top: .0625rem solid #42b983;
-      margin-top: 1.875rem;
-      padding-bottom: 1.875rem;
-      font-size: .75rem;
-      text-align: left;
-    }
     .back {
+
       display: inline-block;
       @include rounded-corners;
     }
