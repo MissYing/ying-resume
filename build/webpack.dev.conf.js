@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const appData = require('../service/mock/db.json')
+const appData = require('../src/service/mock/db.json')
 const home = appData.home
 const comments = appData.comments
 const profile = appData.profile
