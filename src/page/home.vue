@@ -30,8 +30,7 @@ export default {
       //   console.log(err)
       //   throw new Error(err)
       // })
-      let origin = window.location.origin
-      this.$axios.get(origin + '/api/home').then(res => {
+      this.$axios.get('/api/home').then(res => {
         console.log(res)
         if (res.data.success) {
           this.home = res.data.data
