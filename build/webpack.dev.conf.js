@@ -10,6 +10,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const appData = require('../service/mock/db.json')
+const home = appData.home
+const comments = appData.comments
+const profile = appData.profile
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -22,6 +27,26 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    before(app) {
+      app.get('/api/home', (req, res) => {
+        res.json({
+          success: true,
+          data: home
+        }) //接口返回json数据，上面配置的数据seller就赋值给data请求后调用
+      }),
+      app.get('/api/comments', (req, res) => {
+        res.json({
+          success: true,
+          data: comments
+        })
+      }),
+      app.post('/api/profile', function (req, res) { // 注意这里改为post就可以了
+        res.json({
+          success: true,
+          data: profile
+        })
+      })
+    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
