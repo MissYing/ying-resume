@@ -21,16 +21,7 @@ export default {
   methods: {
     initData () {
       // this.$axios.get('/api/posts', {}).then(res => {
-      // this.$axios.get('https://easy-mock.com/mock/5a01524d36a23b429ea925c5/api/home').then(res => {
-      //   console.log(res)
-      //   if (res.data.success) {
-      //     this.home = res.data.data
-      //   }
-      // }).catch(err => {
-      //   console.log(err)
-      //   throw new Error(err)
-      // })
-      this.$axios.get('/api/home').then(res => {
+      this.$axios.get('https://easy-mock.com/mock/5a01524d36a23b429ea925c5/api/home').then(res => {
         console.log(res)
         if (res.data.success) {
           this.home = res.data.data
@@ -39,6 +30,15 @@ export default {
         console.log(err)
         throw new Error(err)
       })
+      // this.$axios.get('/api/home').then(res => {
+      //   console.log(res)
+      //   if (res.data.success) {
+      //     this.home = res.data.data
+      //   }
+      // }).catch(err => {
+      //   console.log(err)
+      //   throw new Error(err)
+      // })
     }
   }
 }
