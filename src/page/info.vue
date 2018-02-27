@@ -171,6 +171,7 @@ export default {
     }
     > .info_main {
       width: 80%;
+      max-width: 50rem;
       padding: 5rem 0;
       margin: auto;
       section:before {
