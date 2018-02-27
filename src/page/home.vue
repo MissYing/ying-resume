@@ -1,22 +1,25 @@
 <template>
   <div class="home">
-    <div class="itemOne"><span>{{ home.zhResume }}</span><span>{{ home.enResume }}</span></div>
-    <div class="itemTwo"><span>{{ home.zhName}}</span><span>{{ home.enName }}</span></div>
-    <div class="itemThree">{{ home.level }}</div>
-    <router-link to="/info" class="arrow_right"></router-link>
+    <div class="itemOne animated swing"><span>{{ home.zhResume }}</span><span>{{ home.enResume }}</span></div>
+    <div class="itemTwo animated fadeInLeftBig"><span>{{ home.zhName}}</span><span>{{ home.enName }}</span></div>
+    <div class="itemThree animated fadeInRightBig">{{ home.level }}</div>
+    <router-link to="/info" class="arrow_right animated infinite bounceIn"></router-link>
   </div>
 </template>
 
 <script>
+import homeModels from './models/home-model'
+
 export default {
   name: 'home',
   data () {
     return {
-      home: ''
+      home: homeModels,
+      show: false
     }
   },
   created () {
-    this.initData()
+    // this.initData()
   },
   methods: {
     initData () {

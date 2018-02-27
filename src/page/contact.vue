@@ -1,22 +1,24 @@
 <template>
   <div class="contact">
-    <div class="thanks">{{ contact.thanks}}</div>
-    <a :href="tel" class="tel">{{ contact.phone }}</a>
-    <router-link to="/info" class="arrow_right"></router-link>
+    <div class="thanks animated zoomIn">{{ contact.thanks}}</div>
+    <a :href="tel" class="tel animated rotateIn">{{ contact.phone }}</a>
+    <router-link to="/info" class="arrow_right animated infinite bounceIn"></router-link>
   </div>
 </template>
 
 <script>
+import contactModels from './models/contact-model'
+
 export default {
   name: 'contact',
   data () {
     return {
-      contact: '',
-      tel: ''
+      contact: contactModels,
+      tel: 'tel:' + contactModels.phone
     }
   },
   created () {
-    this.initData()
+    // this.initData()
   },
   methods: {
     initData () {
@@ -47,6 +49,7 @@ export default {
     > .tel {
       padding-top: 1.25rem;
       font-size: 1.875rem;
+      display: inline-block;
     }
     > .tel:before {
       content: "";

@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import GComponents from '@/components/public'
+import 'animate.css'
 
 Vue.use(GComponents)
 
