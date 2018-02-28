@@ -55,8 +55,7 @@
         <h3>{{ project.title }}</h3>
         <div class="main project_main">
           <div class="work_item" v-for="(list, index) in project.lists" :key="index">
-            <h4>{{ list.level }}</h4>
-            <p>{{ list.company }}</p>
+            <h4>{{ list.company }}</h4>
             <p>{{ list.duty }}</p>
           </div>
         </div>
@@ -360,9 +359,10 @@ export default {
         .work_main {
           .work_item {
             font-size: .75rem;
-            p:last-child {
-              text-align: left;
-            }
+            text-align: left;
+            // p:last-child {
+            //   text-align: left;
+            // }
           }
         }
       }
