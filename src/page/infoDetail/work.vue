@@ -47,46 +47,46 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   @import "../../assets/scss/common.scss";
-  .work {
-    width: 80%;
-    max-width: 50rem;
-    margin: .9375rem auto;
-    border: .0625rem solid #46bd79;
-    padding: .625rem .9375rem;
-    -webkit-overflow-scrolling : touch;
-    overflow-y: auto;
-    @include rounded-corners;
-    h3 {
-      font-size: .875rem;
-    }
-    h3:before {
-      content: "";
-      display: inline-block;
-      @include iconBackground;
-      width: 3.75rem;
-      height: 3.75rem;
-      @include rounded-corners(50%);
-      background-image: url(../../assets/image/user.jpeg);
-      vertical-align: middle;
-      margin-right: .625rem;
-    }
-    .main {
-      border-bottom: .0625rem solid #42b983;
-      margin: 0 auto 1.875rem;
-      padding-bottom: 1.25rem;
-    }
-    .work_main {
-      .work_item {
-        font-size: .75rem;
-        p:last-child {
-          text-align: left;
-        }
-      }
-    }
-    .back {
+  // .work {
+  //   width: 80%;
+  //   max-width: 50rem;
+  //   margin: .9375rem auto;
+  //   border: .0625rem solid #46bd79;
+  //   padding: .625rem .9375rem;
+  //   -webkit-overflow-scrolling : touch;
+  //   overflow-y: auto;
+  //   @include rounded-corners;
+  //   h3 {
+  //     font-size: .875rem;
+  //   }
+  //   h3:before {
+  //     content: "";
+  //     display: inline-block;
+  //     @include iconBackground;
+  //     width: 3.75rem;
+  //     height: 3.75rem;
+  //     @include rounded-corners(50%);
+  //     background-image: url(../../assets/image/user.jpeg);
+  //     vertical-align: middle;
+  //     margin-right: .625rem;
+  //   }
+  //   .main {
+  //     border-bottom: .0625rem solid #42b983;
+  //     margin: 0 auto 1.875rem;
+  //     padding-bottom: 1.25rem;
+  //   }
+  //   .work_main {
+  //     .work_item {
+  //       font-size: .75rem;
+  //       p:last-child {
+  //         text-align: left;
+  //       }
+  //     }
+  //   }
+  //   .back {
 
-      display: inline-block;
-      @include rounded-corners;
-    }
-  }
+  //     display: inline-block;
+  //     @include rounded-corners;
+  //   }
+  // }
 </style>

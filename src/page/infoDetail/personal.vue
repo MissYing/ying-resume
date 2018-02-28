@@ -56,63 +56,63 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   @import "../../assets/scss/common.scss";
-  .personal {
-    width: 80%;
-    max-width: 50rem;
-    margin: .9375rem auto;
-    border: .0625rem solid #46bd79;
-    padding: .625rem .9375rem;
-    -webkit-overflow-scrolling : touch;
-    overflow-y: auto;
-    @include rounded-corners;
-    h3 {
-      font-size: .875rem;
-    }
-    h3:before {
-      content: "";
-      display: inline-block;
-      @include iconBackground;
-      width: 3.75rem;
-      height: 3.75rem;
-      @include rounded-corners(50%);
-      background-image: url(../../assets/image/user.jpeg);
-      vertical-align: middle;
-      margin-right: .625rem;
-    }
-    .main {
-      border-bottom: .0625rem solid #42b983;
-      margin: 0 auto 1.875rem;
-      padding-bottom: 1.25rem;
-    }
-    .personal_main {
-      display: flex;
-      // flex-wrap: wrap;
-      // flex-direction: row;
-      flex-flow: row wrap; // 以上两句可以用这句替代
-      font-size: .75rem;
-      text-align: left;
-      max-width: 100%;
-      overflow: hidden;
-      // div:nth-child(odd), a {
-      //   min-width: 10.625rem;
-      // }
-      div, a {
-        min-width: 9.375rem;
-        line-height: 2.5rem;
-      }
-      div:last-child {
-        margin-left: right;
-      }
-    }
-    .advantage {
-      padding-bottom: 1.875rem;
-      font-size: .75rem;
-      text-align: left;
-    }
-    .back {
-      display: inline-block;
-      @include rounded-corners;
-      font-size: .875rem;
-    }
-  }
+  // .personal {
+  //   width: 80%;
+  //   max-width: 50rem;
+  //   margin: .9375rem auto;
+  //   border: .0625rem solid #46bd79;
+  //   padding: .625rem .9375rem;
+  //   -webkit-overflow-scrolling : touch;
+  //   overflow-y: auto;
+  //   @include rounded-corners;
+  //   h3 {
+  //     font-size: .875rem;
+  //   }
+  //   h3:before {
+  //     content: "";
+  //     display: inline-block;
+  //     @include iconBackground;
+  //     width: 3.75rem;
+  //     height: 3.75rem;
+  //     @include rounded-corners(50%);
+  //     background-image: url(../../assets/image/user.jpeg);
+  //     vertical-align: middle;
+  //     margin-right: .625rem;
+  //   }
+  //   .main {
+  //     border-bottom: .0625rem solid #42b983;
+  //     margin: 0 auto 1.875rem;
+  //     padding-bottom: 1.25rem;
+  //   }
+  //   .personal_main {
+  //     display: flex;
+  //     // flex-wrap: wrap;
+  //     // flex-direction: row;
+  //     flex-flow: row wrap; // 以上两句可以用这句替代
+  //     font-size: .75rem;
+  //     text-align: left;
+  //     max-width: 100%;
+  //     overflow: hidden;
+  //     // div:nth-child(odd), a {
+  //     //   min-width: 10.625rem;
+  //     // }
+  //     div, a {
+  //       min-width: 9.375rem;
+  //       line-height: 2.5rem;
+  //     }
+  //     div:last-child {
+  //       margin-left: right;
+  //     }
+  //   }
+  //   .advantage {
+  //     padding-bottom: 1.875rem;
+  //     font-size: .75rem;
+  //     text-align: left;
+  //   }
+  //   .back {
+  //     display: inline-block;
+  //     @include rounded-corners;
+  //     font-size: .875rem;
+  //   }
+  // }
 </style>
