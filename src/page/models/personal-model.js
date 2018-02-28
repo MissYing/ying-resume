@@ -12,5 +12,5 @@ export default {
   'salaryExpectation': '面议',
   'date': '两周',
   'github': 'https://github.com/MissYing',
-  'advantage': '谦卑随和，团队协作融洽，熟练使用juqery, vue, vux, vue-router, axios, webpack, scss, html5等，熟练使用git, svn等代码管理工具，对node有一定的了解，在项目中使用过express，微信小程序有实践过'
+  'advantage': '为人谦卑随和，团队协作融洽，熟练使用juqery, vue, vux, vue-router, axios, webpack, scss, html5等，熟练使用git, svn等代码管理工具，对node有一定的了解，在项目中使用过express，微信小程序有实践过'
 }

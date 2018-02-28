@@ -54,9 +54,11 @@
       <div class="project" v-if="isProject">
         <h3>{{ project.title }}</h3>
         <div class="main project_main">
-          <p>{{ project.projectOne }}</p>
-          <!-- <div class="work_item" v-for="(list, index) in project.lists" :key="index">
-          </div> -->
+          <div class="work_item" v-for="(list, index) in project.lists" :key="index">
+            <h4>{{ list.level }}</h4>
+            <p>{{ list.company }}</p>
+            <p>{{ list.duty }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -238,7 +240,6 @@ export default {
         }
       }
       .personal {
-        // width: 80%;
         max-width: 50rem;
         margin: 1.25rem auto 1rem;
         border: .0625rem solid #46bd79;
@@ -263,7 +264,6 @@ export default {
         .main {
           border-bottom: .0625rem solid #42b983;
           margin: 0 auto 1.875rem;
-          // padding-bottom: 1.25rem;
         }
         .personal_main {
           display: flex;
@@ -274,9 +274,6 @@ export default {
           text-align: left;
           max-width: 100%;
           overflow: hidden;
-          // div:nth-child(odd), a {
-          //   min-width: 10.625rem;
-          // }
           div, a {
             min-width: 9.375rem;
             line-height: 2.5rem;
@@ -292,7 +289,6 @@ export default {
         }
       }
       .project {
-        // width: 80%;
         max-width: 50rem;
         margin: 1.25rem auto 1rem;
         border: .0625rem solid #46bd79;
@@ -315,9 +311,7 @@ export default {
           margin-right: .625rem;
         }
         .main {
-          // border-bottom: .0625rem solid #42b983;
           margin: 0 auto 1.875rem;
-          // padding-bottom: 1.25rem;
         }
         .project_main {
           display: flex;
@@ -361,9 +355,7 @@ export default {
           margin-right: .625rem;
         }
         .main {
-          // border-bottom: .0625rem solid #42b983;
           margin: 0 auto 1.875rem;
-          // padding-bottom: 1.25rem;
         }
         .work_main {
           .work_item {
